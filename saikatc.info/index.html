@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata for the Webpage -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saikat Chakraborty</title>
+
+  <!-- Favicons We recommend this site for generating favicons: https://www.favicon-generator.org/ -->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap CSS files-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <!-- jQuery UI CSS (optional) -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Google web fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600" rel="stylesheet">
+
+  <!-- Font Awesome Web Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <!-- Academicons Courtesy of https://jpswalsh.github.io/academicons/ -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+  <!-- Local styles -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+    .dropbtn {
+        border-radius: 15px;
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 1.5em;
+      border: none;
+      cursor: pointer;
+      width: 90%;
+    }
+
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980B9;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      border-radius: 20px;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      font-size: 1.5em;
+      width: 81%;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 0.84em;
+    }
+
+    .dropdown a:hover {background-color: #ddd;}
+
+    .show {display: block;}
+
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 10px; /* Location of the box */
+      padding-bottom: 10px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid #888;
+      width: 95%;
+      height: 100%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .dl {
+      color: #aaaaaa;
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .dl:hover,
+    .dl:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .twenty_five {
+            font-size: 19px;
+        }
+        .twenty_six {
+            font-size: 23px;
+        }
+        .twenty {
+            font-size: 17px;
+        }
+        .thirty {
+            font-size: 27px;
+        }
+        .thirty_five {
+            font-size: 31px;
+        }
+        .fourty_two {
+            font-size: 39px;
+        }
+    
+    .tooltip {
+      position: absolute;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+      font-size: 22px;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      font-size: 22px;
+    
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+</style>
+
+</head>
+
+<body>
+
+  <!-- navbar include -->
+  <div w3-include-html="navbar.html"></div>
+
+  <div class="spacer-div-3 hidden-xs hidden-xs"></div>
+
+  <!-- Main content    -->
+  <div id="main-container" class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img class="center-block img img-responsive img-thumbnail" src="img/headshot.png" alt="Image of Saikat">
+
+            <p id="title">
+                <span class="twenty_five">Doctoral Candidate</span><br>
+                <span id="program" class="twenty_five">Computer Science</span>
+            </p>
+
+            <table class="table" id="contact-table" style="margin-bottom: -5px;">
+                <tbody>
+                    <tr>
+                        <td style="width:25px"><i class="fas fa-home"></i></td>
+                        <td class="twenty">
+                            Columbia University<br>
+                            530 West 120th St.<br>
+                            New York, NY 10027
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-phone"></i></td>
+                        <td>
+                            <a href="tel:4342421306">
+                                <span style="font-size: 18px;">
+                                    (434) 242-1306
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-at"></i></td>
+                        <td>
+                            <a href="mailto:saikatc@cs.columbia.edu">
+                                <span style="font-size: 18px;">
+                                    saikatc@cs.columbia.edu
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class='fas fa-book fa-fw' aria-hidden='true'></i>
+                        </td>
+                        <td>
+                            <table style="margin: 0px; padding: 0px;">
+                                <tr style="width: 100%;">
+                                    <td style="width: 85%">
+                                        <span style="font-size:20 px; color: darkgreen;">
+                                            <b>Curriculum vitae&nbsp;&nbsp;</b>
+                                        </span>
+                                    </td>
+                                    <td style="width: 10%; padding-right:15px;">
+                                        <span style="align-items: center">
+                                            <a id="cvBtn" style="cursor:pointer;" 
+                                            data-toggle="tooltip" data-placement="top" title="View">
+                                                <i class="fas fa-binoculars" aria-hidden='true' ></i>
+                                            </a>
+                                        </span>
+                                    </td>
+                                    <td style="width: 10%">
+                                        <span style="align-items: right">
+                                            <a href="pdfs/cv.pdf" target='_blank' style="cursor:pointer;">
+                                                <i class='fas fa-download' aria-hidden='true'
+                                                data-toggle="tooltip" data-placement="top" title="Download"></i>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--<span style="font-size:18 px; color: darkgreen;">
+                                <b>Curriculum vitae</b>
+                            </span>
+                            &nbsp;
+                            <span style="align-items: center">
+                                <a id="cvBtn" style="cursor:pointer;">
+                                    <i class="fas fa-binoculars" aria-hidden='true'></i>
+                                </a>
+                            </span>
+                           &nbsp;
+                            <span style="align-items: center">
+                                <a href="cv.pdf" target='_blank' style="cursor:pointer;">
+                                    <i class='fas fa-print fa-fw' aria-hidden='true'></i>
+                                </a>
+                            </span>-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class='fas fa-book-open fa-fw' aria-hidden='true'></i>
+                        </td>
+                        <td>
+                            <span class="twenty_five" style="color: darkblue;">
+                                <b>Statements</b>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="cvModal" class="modal">
+                <div class="modal-content">
+                    <span class="cvClose close">Close &times;</span>
+                    <p align="center">Curriculum vitae</p>
+                    <iframe width='100%' height='90%' frameborder='0' 
+                        scrolling='yes' class='embed-responsive-item'  
+                        src='pdfs/cv.pdf' 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <table class="table" id="statement-table">
+                <tbody>
+                    <tr>
+                        <td style="width:70%; color: #10016e;">
+                            <!--<span  class="twenty">-->
+                            Research statement
+                            <!--</span>-->
+                        </td>
+                        <td>
+                            <a id="researchBtn" style="cursor:pointer;">
+                                <i class="fas fa-binoculars" aria-hidden='true' 
+                                data-toggle="tooltip" data-placement="top" title="View"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="statements/research.pdf" target="_blank">
+                                <i class='fas fa-download' aria-hidden='true'
+                                 data-toggle="tooltip" data-placement="top" title="Download"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:70%; color: #10016e;">
+                            <!--<span class="twenty">-->
+                            Teaching Statement
+                            <!--</span>-->
+                        </td>
+                        <td>
+                            <a id="teachingBtn" class="twenty" style="cursor: pointer">
+                                <i class="fas fa-binoculars" aria-hidden='true' 
+                                data-toggle="tooltip" data-placement="top" title="View"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="statements/teaching.pdf" target="_blank">
+                                <i class='fas fa-download' aria-hidden='true'
+                                 data-toggle="tooltip" data-placement="top" title="Download"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:70%; color: #10016e;">
+                            <!--<span  class="twenty">-->
+                            Diversity Statement
+                            <!--</span>-->
+                        </td>
+                        <td>
+                            <a id="diversityBtn" class="twenty" style="cursor: pointer">
+                                <i class="fas fa-binoculars" aria-hidden='true' 
+                                data-toggle="tooltip" data-placement="top" title="View"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="statements/diversity.pdf" target="_blank">
+                                <i class='fas fa-download' aria-hidden='true'
+                                 data-toggle="tooltip" data-placement="top" title="Download"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="researchModal" class="modal">
+                <div class="modal-content">
+                    <span class="researchClose close">Close &times;</span>
+                    <!--<a href="statements/research.pdf" download="Research-Statement-Saikat" class="dl">Download</a>-->
+                    <p align="center" class="thirty_five">Research Statement</p>
+                    <iframe width='100%' height='90%' frameborder='0' 
+                        scrolling='yes'   src='statements/research.pdf' 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div id="teachingModal" class="modal">
+                <div class="modal-content">
+                    <span class="teachingClose close">Close &times;</span>
+                    <p align="center" class="thirty_five">Teaching Statement</p>
+                    <iframe width='100%' height='90%' frameborder='0' 
+                        scrolling='yes'  
+                        src='statements/teaching.pdf' 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div id="diversityModal" class="modal">
+                <div class="modal-content">
+                    <span class="diversityClose close">Close &times;</span>
+                    <p align="center" class="thirty_five">Diversity Statement</p>
+                    <iframe width='100%' height='90%' frameborder='0' 
+                        scrolling='yes' 
+                        src='statements/diversity.pdf' 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                  document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+
+                var re_modal = document.getElementById("researchModal");
+                var re_btn = document.getElementById("researchBtn");
+                var re_span = document.getElementsByClassName("researchClose")[0];
+                re_btn.onclick = function() {
+                  re_modal.style.display = "block";
+                };
+                re_span.onclick = function() {
+                  re_modal.style.display = "none";
+                };
+
+                var te_modal = document.getElementById("teachingModal");
+                var te_btn = document.getElementById("teachingBtn");
+                var te_span = document.getElementsByClassName("teachingClose")[0];
+                te_btn.onclick = function() {
+                  te_modal.style.display = "block";
+                };
+                te_span.onclick = function() {
+                  te_modal.style.display = "none";
+                };
+
+                var di_modal = document.getElementById("diversityModal");
+                var di_btn = document.getElementById("diversityBtn");
+                var di_span = document.getElementsByClassName("diversityClose")[0];
+                di_btn.onclick = function() {
+                  di_modal.style.display = "block";
+                };
+                di_span.onclick = function() {
+                  di_modal.style.display = "none";
+                };
+
+                var cv_modal = document.getElementById("cvModal");
+                var cv_btn = document.getElementById("cvBtn");
+                var cv_span = document.getElementsByClassName("cvClose")[0];
+                cv_btn.onclick = function() {
+                  cv_modal.style.display = "block";
+                };
+                cv_span.onclick = function() {
+                  cv_modal.style.display = "none";
+                };
+
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                  if (event.target === modal) {
+                    modal.style.display = "none";
+                  }
+                }
+            </script>
+        </div>
+        <!--<div class="col-sm-8">
+              <div class="slideshow-container">
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img 
+                        src="https://image.shutterstock.com/image-vector/vector-banner-design-circuit-board-260nw-1233925105.jpg" 
+                        style="width:100%"
+                    >
+                  </div>
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img 
+                        src="https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?size=626&ext=jpg" 
+                        style="width:100%"
+                    >
+                  </div>
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img 
+                        src="https://media.istockphoto.com/photos/minimal-work-space-creative-flat-lay-photo-of-workspace-desk-top-view-picture-id1220573371?b=1&k=20&m=1220573371&s=170667a&w=0&h=dyT6F0wNP1NdDdvvTd95RVrR8qHwbEU8bqLxpDpSejw=" 
+                        style="width:100%"
+                    >
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                  </div>
+
+                  <script>
+                  var slideIndex = 1;
+                  showSlides(slideIndex);
+
+                  function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                  }
+
+                  function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                  }
+
+                  function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}
+                    if (slideIndex < 1) {slideIndex = slides.length}
+                    setTimeout(showSlides, 10000); // Change image every 2 seconds
+                  }
+                  </script>
+
+          </div>-->
+        <div class="col-sm-8">
+            <p align="justify" class="twenty_five">
+                Hi there, I am Saikat, a Computer Science Ph.D. candidate at 
+                <span style="color: darkgoldenrod">Columbia University in the City of New York</span> working with  
+                <a href="https://rayb.info"  class="twenty_five">Professor Baishakhi Ray</a>. 
+                <span style='color: red'  class="twenty_five">
+                    I'm on academic job market this year. Here is my   
+                    <a href="statements/research.pdf" target="_blank" 
+                    class="twenty_five" style='color: red'><u>research statement</u></a>. 
+                    I will be very happy to talk about my research. 
+                    Please contact me <a href="https://saikatc.info/contact.html" 
+                    style='color: red' class="twenty_five"><u>here</u>.</a>
+                </span>
+            </p>
+            <p align="justify" class="twenty_five">
+                My primary research area is Software Engineering. In particular, 
+                I focus on <span><b>Artificial Intelligence for Software Engineering (<u>AI4SE</u>)</b></span>.
+                My research passion is  <i>  Programming Language Processing (PLP) </i> --  
+                A coalescence between Software Engineering and Machine Learning. 
+                More specifically, I am motivated by building tools and 
+                techniques that reduces software engineering practitioners' burden by
+                automating tasks they have to undergo in their everyday job. 
+                Over the years, I have been building developer assistance tools 
+                with research collaboration across 
+                Software Engineering, Machine Learning, Natural Language Processing, 
+                and Security. 
+            </p>
+          
+          <!--p align="justify" class="twenty_five"> 
+            I am currently on job market and looking for research jobs. Here is my 
+            <a href="statements/research.pdf" target="_blank" class="twenty_five">research statement</a>. 
+            I will be very happy to talk about my research. 
+          </p-->
+        <!--/div-->
+        <!--div class="col-sm-8" 
+               style="color:darkmagenta; text-align: center; padding-bottom: 15px; font-size: 25px;"-->
+              
+        </div>
+        <div class="col-sm-8">
+          <div id="read-more">
+              <p align="justify"  class="twenty_five">
+                  My primary research focus is divided into two parts &dash; 
+              </p>
+              <ul>
+                  <li>
+                      <span style='color: darkgreen'  class="twenty_five">
+                          <b>
+                              Source Code Understanding
+                          </b>
+                      </span>
+                  </li>
+                  <li>
+                      <span style='color: darkred'  class="twenty_five">
+                          <b>Source Code Generation</b>
+                      </span>
+                  </li>
+              </ul>
+              <p align="justify"  class="twenty_five">
+                  I have developed tools for Program Comprehension, Code Generation, 
+                  Code Translation across PLs, Vulnerability Detection, and Modeling 
+                  Program Changes/Program Repair. My future research interest is to 
+                  push the boundary of machine understanding of source code and 
+                  building tools for improving the software development 
+                  pipeline(i.e., building better developer assisting tools) 
+                  with Machine Learning and Deep Learning. 
+                  <!--I am writing my Ph.D. dissertation on Learning to Edit Code. 
+                  The motivation for this research comes from the fact that 
+                  the way developers edit/change code are very repetitive. 
+                  My dissertation contributes to the design and development of 
+                  automated code change modeling tools. Such a tool will reduce the 
+                  developer burden of redundant work, eventually improving the 
+                  developers’ productivity. In my research of building such a tool, 
+                  I solved some interesting and integral sub-problems in ML-based 
+                  source code analysis. Such sub-problems include designing models 
+                  generating syntactic and contextually correct code, understanding 
+                  the code syntax and semantics, and reasoning about code, etc.-->
+              </p>
+          </div>
+
+
+
+          <!-- If you don't want a 'read more' section, simple delete the entire span class below -->
+          <span class="badge" id="badge-more">more</span>
+
+          <h3 class="push-down-3">
+              <span  class="twenty_six">Academics</span>
+          </h3>
+          <ul id="education">
+            <li  class="twenty">
+              Ph.D. in Computer Science, Expected to Graduate in Aug. 2022<br>
+              <span class="university twenty">
+                  <em>
+                      Columbia University
+                  </em>
+              </span>
+            </li>
+            <li  class="twenty">
+              M.S. in Computer Science, 2021<br>
+              <span class="university twenty">
+                  <em>
+                      Columbia University
+                  </em>
+              </span>
+            </li>
+            <li  class="twenty">
+              B.Sc. in Computer Science and Engineering, 2014<br>
+              <span class="university twenty">
+                  <em>
+                      Bangladesh University of Engineering and Technology
+                  </em>
+              </span>
+            </li>
+
+          </ul>
+
+          <h3 class="push-down-3">
+              <span class="thirty">News</span>
+          </h3>
+          <ul id="education">
+            <li>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>June 2022</b>: 
+                    NatGen is accepted in ESEC/FSE'22. 
+                    [<a 
+                         style='font-size:1em;' 
+                         href="https://arxiv.org/pdf/2206.07585">paper</a>] 
+                    [<a href="#">slide</a>]
+                    [<a href="https://github.com/natgen-team/NatGen">code</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>March 2022</b>: 
+                    I talked about my research effort in 
+                    <a href="pdfs/plp.pdf" style='font-size:1em;'>
+                        Programming Language Processing
+                    </a>
+                    at Auburn University.
+                    [<a href="pdfs/plp.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>March 2022</b>: 
+                    I talked about my research effort in 
+                    <a href="pdfs/plp.pdf" style='font-size:1em;'>
+                        Programming Language Processing
+                    </a>
+                    at RiSE lab @ Microsoft Research.
+                    [<a href="pdfs/plp.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>March 2022</b>: 
+                    DISCO is accepted in ACL'22. 
+                    [<a 
+                         style='font-size:1em;' 
+                         href="https://arxiv.org/pdf/2110.03868.pdf">paper</a>] 
+                    [<a href="#">slide</a>]
+                    [<a href="#">code</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-graduation-cap"></i>
+                    </span> 
+                    <b>Dec 2021</b>: 
+                    Another milestone towards PhD - passed the Ph.D. proposal. My dissertation committee accepted my thesis proposal. 
+                    [<a href="#" style='font-size:1em;'>proposal</a>] 
+                    [<a href="pdfs/proposal.pdf" style='font-size:1em;'>slide</a>].
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>November 2021</b>: 
+                    I am giving a talk about our research effort in 
+                    <a href="pdfs/vulnerability.pdf" style='font-size:1em;'>
+                        Deep Learning Based Vulnerability Detection in Source Code
+                    </a>
+                    at National Security Agency (NSA).
+                    [<a href="pdfs/vulnerability.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>November 2021</b>: 
+                    I am presenting our paper  
+                    <a href="https://arxiv.org/pdf/2108.06645.pdf" style='font-size:1em;' >
+                        On Multi-Modal Learning of Editing Source Code
+                    </a> at ASE.
+                    [<a href="pdfs/modit-slide.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>September 2021</b>: 
+                    REDCODER is accepted in EMNLP-findings'21. 
+                    [<a 
+                         style='font-size:1em;' 
+                         href="https://arxiv.org/pdf/2108.11601.pdf">paper</a>] 
+                    <!--[<a href="#">slide</a>]-->
+                    <!--[<a href="https://github.com/rizwan09/REDCODER/">code</a>]-->
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>July 2021</b>: 
+                    MODIT is accepted in ASE'21.
+                    [<a 
+                        style='font-size:1em;' 
+                        href="https://arxiv.org/pdf/2108.06645.pdf">paper</a>] 
+                    <!--[<a href="#">slide</a>]-->
+                    <!--[<a href="https://github.com/modit-team/MODIT">code</a>]-->
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>June 2021</b>: 
+                    I am giving a talk about <a href="https://arxiv.org/pdf/2103.06333.pdf" style='font-size:1em;' >PLBART</a> at IBM research.
+                    [<a href="pdfs/PLBART-slide.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>June 2021</b>: 
+                    ReVeal is accepted in TSE. 
+                    [<a href="https://ieeexplore.ieee.org/abstract/document/9448435" style='font-size:1em;' >paper</a>] 
+                    <!--[<a href="#">slide</a>]-->
+                    <!--[<a href="#">code</a>]-->
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-address-card"></i>
+                    </span> 
+                    <b>June 2021</b>: 
+                    I am joining Facebook's BigCode research team 
+                    as an intern for this summer. 
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>May 2021</b>: 
+                    I am giving a talk about my research on <b>Learning to Edit Code</b> at 
+                    <a href="https://ps.berkeley.edu/" style='font-size:1em;' >UC Berkeley Programming Systems Research Seminar.</a>
+                    [<a href="pdfs/berkeley-abstract.pdf" style='font-size:1em;'>abstract</a>] 
+                    [<a href="pdfs/PS-Sem.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>April 2021</b>: 
+                    I am giving a talk about <a href="https://arxiv.org/pdf/2103.06333.pdf" style='font-size:1em;'>PLBART</a> at 
+                    <a href="https://decallab.cs.ucdavis.edu/" style='font-size:1em;'>UC Davis Decal Lab.</a>
+                    [<a href="pdfs/PLBART-slide.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-microphone"></i>
+                    </span> 
+                    <b>March 2021</b>: 
+                    I am giving a talk on our research effort in  
+                    <a href="pdfs/ml4source-code.pdf" style='font-size:1em;'>Machine Learning for Source Code Analysis</a>
+                    at Open University, UK and Toshiba Lab, UK.
+                    [<a href="pdfs/ml4source-code.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>March 2021</b>: 
+                    PLBART is accepted in NAACL'21. 
+                    [<a href="https://arxiv.org/pdf/2103.06333.pdf" style='font-size:1em;'>paper</a>] 
+                    [<a href="pdfs/PLBART-slide.pdf" style='font-size:1em;'>slide</a>]
+                    [<a style='font-size:1em;' href="https://underline.io/events/122/sessions/4197/lecture/20024-unified-pre-training-for-program-understanding-and-generation">talk</a>]
+                    <!--[<a href="https://github.com/wasiahmad/PLBART/">code</a>]-->
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-handshake"></i>
+                    </span> 
+                    <b>Jan 2021</b>: 
+                    I am serving as a Program Committee member in 
+                    <a href="https://nlp4prog.github.io/2021/" style='font-size:1em;'>
+                        Workshop on Natural Language Processing for Programming
+                    </a>.
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-handshake"></i>
+                    </span> 
+                    <b>Jan 2021</b>: 
+                    I am serving as a Program Committee member in 
+                    <a href="https://2021.msrconf.org/track/msr-2021-mining-challenge" style='font-size:1em;'>
+                        MSR mining Challenge 2021
+                    </a>.
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-graduation-cap"></i>
+                    </span> 
+                    <b>Dec 2020</b>: 
+                    Passed the Ph.D. Candidacy Exam. 
+                    [<a href="pdfs/candidacy-research.pdf" style='font-size:1em;'>abstract</a>] 
+                    [<a href="pdfs/candidacy-slide.pdf" style='font-size:1em;'>slide</a>]
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>Aug 2020</b>: 
+                    CODIT is accepted to be publish in TSE. 
+                    [<a href="https://arxiv.org/pdf/1810.00314.pdf" style='font-size:1em;'>paper</a>] 
+                    [<a href="pdfs/Codit.pdf" style='font-size:1em;'>slide</a>]
+                    <!--[<a href="https://github.com/saikat107/Codit">code</a>]-->
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:20px;'>
+                        <i class="fas fa-book-open"></i>
+                    </span> 
+                    <b>May 2020</b>: 
+                    Our paper on Code Summarization is accepted in ACL 2020. 
+                    [<a href="https://arxiv.org/pdf/2005.00653.pdf" style='font-size:1em;'>paper</a>] 
+                    [<a href="https://papertalk.org/papertalks/6594" style='font-size:1em;'>talk</a>]
+                    <!--[<a href="https://github.com/wasiahmad/NeuralCodeSum">code</a>]-->
+                </p>
+                <p align="justify" class="twenty">
+                    <span style='font-size:22px;'>
+                        <i class="fas fa-laptop-code"></i>
+                    </span> 
+                    <b>Feb 2020</b>: I have built a line level 
+                    <a href="https://github.com/saikat107/C-Code-Slicer" style='font-size:1em;'>
+                        Code Slice Extractor
+                    </a> from C function. 
+                    Feel Free to use, extend, and star the repository.
+                </p>
+            </li>
+          </ul>
+
+
+        </div>
+    </div>
+  </div>
+
+  <!-- Back-to-top button -->
+  <a 
+      role="button" id="topper" data-toggle="tooltip" data-placement="top" 
+      title="Top" class="btn scroll-link" href="#top">
+      <i class="fa fa-fw fa-2x fa-caret-up" aria-hidden="true"></i>
+  </a>
+
+
+  <!-- footer include -->
+  <div w3-include-html="footer.html"></div>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS Library -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  <!-- html file include script | used for navbar and footer -->
+  <script src="js/w3data.js"></script>
+  <script>
+    w3IncludeHTML()
+  </script>
+
+  <!-- Local scripts -->
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("li#about a").addClass("active");
+      $("li#about a").addClass("hvr-bubble-bottom");
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+    });
+  </script>
+
+</body>
+
+</html>
